@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EGE calculator</title>
+</head>
+<style>
+    :root {
+        --gap: 16px;
+        --max-width: 1100px;
+        --color-primary: #0b74de;
+        --color-accent: #ff6b6b;
+        --text: #222;
+        --muted: #6b7280;
+        --bg: #f7fafc;
+    }
+
+
+    /* Reset-ish */
+    * {
+        box-sizing: border-box
+    }
+
+    html,
+    body {
+        height: 100%
+    }
+
+    a {
+        text-decoration: none;
+        color: #222;
+    }
+
+    body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        color: var(--text);
+        background: var(--bg);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.4;
+    }
+
+
+    /* Layout */
+    .page {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+
+    .page__inner {
+        width: 100%;
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: var(--gap);
+        flex: 3 0 auto;
+    }
+
+    .page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        align-items: center;
+    }
+
+    .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 4px 18px rgba(14, 30, 37, 0.06);
+    }
+
+
+    .card__title {
+        margin: 0 0 8px 0;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+
+    .card__input {
+        box-sizing: border-box;
+        border: 1px solid rgba(5, 36, 67, 0.3);
+        border-radius: 30px;
+        padding: 0 20px;
+        height: 36px;
+        width: 245px;
+    }
+
+
+    /* Modifier: card--compact */
+    .card--compact {
+        padding: 12px;
+        border-radius: 10px
+    }
+
+
+    /* Block: grid */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
+        gap: 16px;
+        margin-top: 16px;
+    }
+
+    .button {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 26px;
+        border: none;
+        padding: 11px 30px;
+        border-radius: 30px;
+        flex-shrink: 0;
+        gap: 10px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .button--search {
+        background: linear-gradient(270deg, rgb(76, 131, 192) 0%, rgb(54, 81, 175) 100%);
+        color: rgb(255, 255, 255);
+    }
+
+    .hero__button {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Small utility modifiers (BEM compatible) */
+    .u-center {
+        text-align: center
+    }
+
+    .u-muted {
+        color: var(--muted)
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+</style>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="page__inner header__row">
+                <a href="#" class="header__logo">Черновой вариант</a>
+
+            </div>
+        </header>
+
+        <main class="page__inner" role="main">
+            <section class="hero">
+                <div class="hero__content">
+                    <h1 class="hero__title">Калькулятор ЕГЭ</h1>
+                    <p class="hero__lead">Введите свои баллы по предметам для подбора подходящих направлений.</p>
+
+                    <div class="grid" aria-live="polite">
+                        <article class="grid__item card">
+                            <h3 class="card__title">Русский язык</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card card--compact">
+                            <h3 class="card__title">Математика</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card">
+                            <h3 class="card__title">Физика</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card">
+                            <h3 class="card__title">Химия</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card card--compact">
+                            <h3 class="card__title">Английский язык</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card">
+                            <h3 class="card__title">Биология</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card">
+                            <h3 class="card__title">География</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card card--compact">
+                            <h3 class="card__title">Информатика и ИКТ</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card">
+                            <h3 class="card__title">Испанский язык</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card">
+                            <h3 class="card__title">История</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card card--compact">
+                            <h3 class="card__title">Китайский язык</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card">
+                            <h3 class="card__title">Литература</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card">
+                            <h3 class="card__title">Немецкий язык</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card card--compact">
+                            <h3 class="card__title">Обществознание</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+                        <article class="grid__item card">
+                            <h3 class="card__title">Французский язык</h3>
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30"
+                                max="40"></input>
+                        </article>
+
+
+                    </div>
+                    <div class="hero__button">
+                        <button class="button button--search">Искать</button>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <script>
+                // Маленький JS пример — поведение для кнопок
+                document.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.button');
+                    if (!btn) return;
+                    if (btn.classList.contains('button--search')) {
+                        alert('Вы нажали главное действие');
+                    } else {
+                        console.log('Нажата обычная кнопка');
+                    }
+                });
+
+                // Рекомендация: храните побочные классы UI в виде отдельных блоков, напр. .is-hidden, .is-active,
+                // либо используйте модификаторы BEM для видимых состояний, например .nav__link--active
+            </script>
+</body>
+
+</html>
