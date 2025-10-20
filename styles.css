@@ -14,15 +14,6 @@
      box-sizing: border-box
  }
 
- html,
- body {
-     height: 100%
- }
-
- a {
-     text-decoration: none;
-     color: #222;
- }
 
  body {
      margin: 0;
@@ -34,27 +25,27 @@
      line-height: 1.4;
  }
 
+ a {
+     text-decoration: none;
+     color: #222;
+ }
 
  /* Layout */
  .page {
      display: flex;
-     justify-content: center;
+     align-items: center;
      min-height: 100vh;
      flex-direction: column;
+     padding: 0 50px;
  }
 
 
  .page__inner {
      width: 100%;
      max-width: var(--max-width);
-     margin: 0 auto;
+     margin: 0;
      padding: var(--gap);
      flex: 3 0 auto;
- }
-
- .page {
-     display: flex;
-     flex-direction: column;
  }
 
  .hero {
@@ -134,6 +125,7 @@
  }
 
  .calc_result_area {
+     display: flex;
      background-color: #e9f1f777;
  }
 
