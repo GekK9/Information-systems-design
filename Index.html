@@ -20,89 +20,107 @@
                     <div class="grid" aria-live="polite">
                         <article class="grid__item card">
                             <h3 class="card__title">Русский язык</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="russian">
                         </article>
 
                         <article class="grid__item card card--compact">
                             <h3 class="card__title">Математика</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="math">
                         </article>
 
                         <article class="grid__item card">
                             <h3 class="card__title">Физика</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="physics">
                         </article>
 
                         <article class="grid__item card">
                             <h3 class="card__title">Химия</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="chemistry">
                         </article>
 
-                        <article class="grid__item card card--compact">
+                        <article class="grid__item card card--compac">
                             <h3 class="card__title">Английский язык</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="foreign">
                         </article>
 
                         <article class="grid__item card">
                             <h3 class="card__title">Биология</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="biology">
                         </article>
 
                         <article class="grid__item card">
                             <h3 class="card__title">География</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="geography">
                         </article>
 
-                        <article class="grid__item card card--compact">
+                        <article class="grid__item card card">
                             <h3 class="card__title">Информатика и ИКТ</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="informatics">
                         </article>
 
                         <article class="grid__item card">
                             <h3 class="card__title">Испанский язык</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="foreign">
                         </article>
 
                         <article class="grid__item card">
                             <h3 class="card__title">История</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="history">
                         </article>
 
-                        <article class="grid__item card card--compact">
+                        <article class="grid__item card card">
                             <h3 class="card__title">Китайский язык</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="foreign">
                         </article>
 
                         <article class="grid__item card">
                             <h3 class="card__title">Литература</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="literature">
                         </article>
 
                         <article class="grid__item card">
                             <h3 class="card__title">Немецкий язык</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="foreign">
                         </article>
 
-                        <article class="grid__item card card--compact">
+                        <article class="grid__item card card">
                             <h3 class="card__title">Обществознание</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="social">
                         </article>
 
                         <article class="grid__item card">
                             <h3 class="card__title">Французский язык</h3>
-                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="40">
+                            <input class="card__input" type="number" placeholder="От 30 до 100" min="30" max="100"
+                                data-subject="foreign">
                         </article>
-
-
                     </div>
                     <div class="hero__button">
-                        <button class="button button--search">Искать</button>
+                        <button class="button button--search" id="searchButton">Искать</button>
                     </div>
                 </div>
             </section>
 
-            <section class="hero calc_result_area">
-                <table class="calc_result_area brstu-table">
+            <section class="hero calc_result_area hidden" id="resultsSection">
+                <h1 style="margin: 0">Результат поиска</h1>
+                <div class="no-results hidden" id="noResultsMessage">
+                    <p>По вашим баллам не найдено подходящих направлений.</p>
+                    <p>Попробуйте ввести баллы по другим предметам.</p>
+                </div>
+                <table class="calc_result_area brstu-table" id="directionsTable">
                     <thead>
                         <tr>
                             <td colspan="2" style="width: 228px;">
@@ -112,14 +130,10 @@
                             <td style="width: 180px;">
                                 <p><strong>Перечень общеобразовательных вступительных испытаний</strong></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p><strong>Перечень вступительных испытаний на базе среднего профессионального
-                                        образования</strong></p>
-                            </td>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics">
                             <td style="width: 67px;">
                                 <p>01.03.02</p>
                             </td>
@@ -134,15 +148,9 @@
                                 <p>- Физика</p>
                                 <p>- Информатика<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Основы программирования</p>
-                                <p>- Основы экономики</p>
-                            </td>
                         </tr>
-                        <tr>
+                        <tr data-required="biology,russian"
+                            data-optional="geography,math,physics,informatics,chemistry">
                             <td style="width: 67px;">
                                 <p>05.03.06</p>
                             </td>
@@ -160,15 +168,9 @@
                                 <p>- Физика</p>
                                 <p>- Химия</p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Безопасность жизнедеятельности<sup></sup></p>
-                                <p>2. Русский язык<sup></sup></p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Информационные технологии</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics,chemistry">
                             <td style="width: 67px;">
                                 <p>08.03.01</p>
                             </td>
@@ -183,15 +185,9 @@
                                 <p>- Информатика</p>
                                 <p>- Химия<sup></sup></p>
                             </td>
-                            <td rowspan="2" style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык<sup></sup></p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Основы инженерной графики</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics,chemistry">
                             <td style="width: 67px;">
                                 <p>08.03.01</p>
                             </td>
@@ -199,7 +195,7 @@
                                 <p>Строительство (<em>Городское строительство и эксплуатация недвижимости</em>)</p>
                             </td>
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics">
                             <td style="width: 67px;">
                                 <p>09.03.02</p>
                             </td>
@@ -214,15 +210,9 @@
                                 <p>- Информатика</p>
                                 <p>- Физика <sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Основы программирования</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics">
                             <td style="width: 67px;">
                                 <p>09.03.03</p>
                             </td>
@@ -236,15 +226,10 @@
                                 <p>- Информатика</p>
                                 <p>- Физика<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Основы программирования</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics">
                             <td style="width: 67px;">
                                 <p>09.03.03</p>
                             </td>
@@ -258,15 +243,9 @@
                                 <p>- Информатика</p>
                                 <p>- Физика<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Основы программирования</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics">
                             <td style="width: 67px;">
                                 <p>11.03.02</p>
                             </td>
@@ -281,15 +260,9 @@
                                 <p>- Физика</p>
                                 <p>- Информатика</p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Электротехника и электроника</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics">
                             <td style="width: 67px;">
                                 <p>11.03.02</p>
                             </td>
@@ -304,15 +277,9 @@
                                 <p>- Физика</p>
                                 <p>- Информатика</p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Электротехника и электроника</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics,chemistry">
                             <td style="width: 67px;">
                                 <p>13.03.01</p>
                             </td>
@@ -327,15 +294,9 @@
                                 <p>- Информатика</p>
                                 <p>- Химия<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Электротехника и электроника</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics,chemistry">
                             <td style="width: 67px;">
                                 <p>13.03.01</p>
                             </td>
@@ -350,15 +311,9 @@
                                 <p>- Информатика</p>
                                 <p>- Химия<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Электротехника и электроника</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics,chemistry">
                             <td style="width: 67px;">
                                 <p>13.03.02</p>
                             </td>
@@ -373,15 +328,9 @@
                                 <p>- Информатика</p>
                                 <p>- Химия<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Электротехника и электроника</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics,chemistry">
                             <td style="width: 67px;">
                                 <p>15.03.02</p>
                             </td>
@@ -397,15 +346,9 @@
                                 <p>- Информатика</p>
                                 <p>- Химия<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Основы инженерной графики</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics,chemistry">
                             <td style="width: 67px;">
                                 <p>15.03.05</p>
                             </td>
@@ -421,15 +364,9 @@
                                 <p>- Информатика</p>
                                 <p>- Химия<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Основы инженерной графики</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics,chemistry">
                             <td style="width: 67px;">
                                 <p>23.03.02</p>
                             </td>
@@ -446,15 +383,9 @@
                                 <p>- Информатика</p>
                                 <p>- Химия<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Основы инженерной графики</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics,chemistry">
                             <td style="width: 67px;">
                                 <p>23.03.03</p>
                             </td>
@@ -470,15 +401,9 @@
                                 <p>- Информатика</p>
                                 <p>- Химия<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Основы инженерной графики</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="physics,informatics,chemistry">
                             <td style="width: 67px;">
                                 <p>27.03.04</p>
                             </td>
@@ -494,15 +419,10 @@
                                 <p>- Информатика</p>
                                 <p>- Химия<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык</p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Электротехника и электроника</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian"
+                            data-optional="physics,informatics,geography,chemistry,biology">
                             <td style="width: 67px;">
                                 <p>35.03.01</p>
                             </td>
@@ -519,15 +439,10 @@
                                 <p>- Биология</p>
                                 <p>- Информатика</p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Безопасность жизнедеятельности<sup></sup></p>
-                                <p>2. Русский язык<sup></sup></p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Информационные технологии</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian"
+                            data-optional="physics,informatics,geography,biology,chemistry">
                             <td style="width: 67px;">
                                 <p>35.03.02</p>
                             </td>
@@ -545,15 +460,10 @@
                                 <p>- Биология</p>
                                 <p>- Информатика</p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Безопасность жизнедеятельности<sup></sup></p>
-                                <p>2. Русский язык<sup></sup></p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Информационные технологии</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian"
+                            data-optional="physics,informatics,chemistry,geography,biology">
                             <td style="width: 67px;">
                                 <p>35.03.10</p>
                             </td>
@@ -570,15 +480,9 @@
                                 <p>- Биология</p>
                                 <p>- Информатика</p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Безопасность жизнедеятельности<sup></sup></p>
-                                <p>2. Русский язык<sup></sup></p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Информационные технологии</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="history,informatics,social,geography,foreign">
                             <td style="width: 67px;">
                                 <p>38.03.01</p>
                             </td>
@@ -595,15 +499,9 @@
                                 <p>- Информатика</p>
                                 <p>- Иностранный язык<sup>1</sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык<sup></sup></p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Психология</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="math,russian" data-optional="history,informatics,social,foreign">
                             <td style="width: 67px;">
                                 <p>38.03.03</p>
                             </td>
@@ -619,15 +517,9 @@
                                 <p>- Информатика</p>
                                 <p>- Иностранный язык<sup>1</sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Информационные технологии</p>
-                                <p>2. Русский язык<sup></sup></p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Психология</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="social,russian" data-optional="history,informatics,math,foreign">
                             <td style="width: 67px;">
                                 <p>40.03.01</p>
                             </td>
@@ -643,15 +535,10 @@
                                 <p>- Математика (профильная)</p>
                                 <p>- Иностранный язык<sup>1</sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Основы права</p>
-                                <p>2. Русский язык<sup></sup></p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Информационные технологии</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="social,russian"
+                            data-optional="history,informatics,math,foreign,geography,biology,literature">
                             <td style="width: 67px;">
                                 <p>44.03.01</p>
                             </td>
@@ -670,15 +557,9 @@
                                 <p>- Литература</p>
                                 <p>- Иностранный язык<sup>1</sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Педагогика</p>
-                                <p>2. Русский язык<sup></sup></p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Психология</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="social,russian" data-optional="math,biology">
                             <td style="width: 67px;">
                                 <p>44.03.02</p>
                             </td>
@@ -692,15 +573,10 @@
                                 <p>- Математика (профильная)</p>
                                 <p>- Биология<sup></sup></p>
                             </td>
-                            <td style="width: 227px;">
-                                <p>1. Педагогика</p>
-                                <p>2. Русский язык<sup></sup></p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Психология</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
-                        <tr>
+                        <tr data-required="social,russian"
+                            data-optional="history,informatics,math,foreign,geography,biology,literature">
                             <td style="width: 67px;">
                                 <p>44.03.05</p>
                             </td>
@@ -720,14 +596,10 @@
                                 <p>- География</p>
                                 <p>- Иностранный язык<sup>1</sup></p>
                             </td>
-                            <td rowspan="2" style="width: 227px;">
-                                <p>1. Педагогика</p>
-                                <p>2. Русский язык<sup></sup></p>
-                                <p>3. Предмет по выбору:</p>
-                                <p>- Психология</p>
-                                <p>- Основы экономики</p>
-                            </td>
+
                         </tr>
+                        <tr data-required="social,russian"
+                            data-optional="history,informatics,math,foreign,geography,biology,literature">
                         <tr>
                             <td style="width: 67px;">
                                 <p>44.03.05</p>
@@ -747,22 +619,8 @@
                     </tbody>
                 </table>
             </section>
-
-            <script>
-                // Маленький JS пример — поведение для кнопок
-                document.addEventListener('click', (e) => {
-                    const btn = e.target.closest('.button');
-                    if (!btn) return;
-                    if (btn.classList.contains('button--search')) {
-                        alert('Вы нажали главное действие');
                     } else {
-                        console.log('Нажата обычная кнопка');
-                    }
-                });
-
-                // Рекомендация: храните побочные классы UI в виде отдельных блоков, напр. .is-hidden, .is-active,
-                // либо используйте модификаторы BEM для видимых состояний, например .nav__link--active
-            </script>
+            <script src="scripts.js"></script>
 </body>
 
 </html>
