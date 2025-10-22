@@ -66,8 +66,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // Показываем/скрываем сообщение об отсутствии результатов
         if (hasVisibleRows) {
             noResultsMessage.classList.add('hidden');
+            directionsTable.classList.remove('hidden')
+
         } else {
             noResultsMessage.classList.remove('hidden');
+            directionsTable.classList.add('hidden')
         }
     }
 
