@@ -9,7 +9,6 @@
  }
 
 
- /* Reset-ish */
  * {
      box-sizing: border-box
  }
@@ -30,7 +29,6 @@
      color: #222;
  }
 
- /* Layout */
  .page {
      display: flex;
      align-items: center;
@@ -79,14 +77,11 @@
  }
 
 
- /* Modifier: card--compact */
  .card--compact {
      padding: 12px;
      border-radius: 10px
  }
 
-
- /* Block: grid */
  .grid {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
@@ -133,7 +128,24 @@
      border-collapse: collapse;
  }
 
- /* Small utility modifiers (BEM compatible) */
+ .hidden {
+     display: none;
+ }
+
+ .highlight {
+     background-color: #e8f5e9;
+     border-left: 4px solid #4caf50;
+ }
+
+ .no-results {
+     text-align: center;
+     padding: 20px;
+     background-color: #fff3cd;
+     border: 1px solid #ffeaa7;
+     border-radius: 4px;
+     margin: 20px 0;
+ }
+
  .u-center {
      text-align: center
  }
