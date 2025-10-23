@@ -10,17 +10,13 @@ document.addEventListener('DOMContentLoaded', function () {
         'math': 'Математика',
         'physics': 'Физика',
         'chemistry': 'Химия',
-        'foreign': 'Английский язык',
+        'foreign': 'Иностранный язык',
         'biology': 'Биология',
         'geography': 'География',
         'informatics': 'Информатика',
-        'foreign': 'Испанский язык',
         'history': 'История',
-        'foreign': 'Китайский язык',
         'literature': 'Литература',
-        'foreign': 'Немецкий язык',
         'social': 'Обществознание',
-        'foreign': 'Французский язык'
     };
 
     searchButton.addEventListener('click', filterDirections);
