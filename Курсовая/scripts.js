@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             noResultsMessage.classList.remove('hidden');
             directionsTable.classList.add('hidden')
+            exportWrapper.classList.add("hidden");
         }
     }
 
