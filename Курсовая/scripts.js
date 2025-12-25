@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const resultsSection = document.getElementById('resultsSection');
     const noResultsMessage = document.getElementById('noResultsMessage');
     const directionsTable = document.getElementById('directionsTable');
-
+    const exportWrapper = document.getElementById("exportButtonWrapper");
     // Маппинг названий предметов с data-атрибутами
     const subjectMapping = {
         'russian': 'Русский язык',
@@ -35,6 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
+        
+
+
         // Показываем секцию с результатами
         resultsSection.classList.remove('hidden');
 
@@ -63,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (hasVisibleRows) {
             noResultsMessage.classList.add('hidden');
             directionsTable.classList.remove('hidden')
+            exportWrapper.classList.remove("hidden");
 
         } else {
             noResultsMessage.classList.remove('hidden');
@@ -106,3 +110,46 @@ document.addEventListener('DOMContentLoaded', function () {
         return true;
     }
 });
+
+document.getElementById("exportButton").onclick = () => {
+    exportTableToXLSX("directionsTable", "ege_results.xlsx");
+};
+
+function exportTableToXLSX(tableId, filename) {
+    const table = document.getElementById(tableId);
+
+    const rows = Array.from(table.querySelectorAll("tr"))
+        .filter(row => row.offsetParent !== null);
+
+    const data = rows.map(row =>
+        Array.from(row.querySelectorAll("td, th"))
+            .map(cell => cell.innerText.trim())
+    );
+
+    const worksheet = XLSX.utils.aoa_to_sheet(data);
+
+    const range = XLSX.utils.decode_range(worksheet["!ref"]);
+    for (let C = range.s.c; C <= range.e.c; ++C) {
+        const cellAddress = XLSX.utils.encode_cell({ r: 0, c: C });
+        if (worksheet[cellAddress]) {
+            worksheet[cellAddress].s = {
+                font: { bold: true }
+            };
+        }
+    }
+
+    const colWidths = data[0].map((_, colIndex) => {
+        const maxLength = Math.max(
+            ...data.map(row => (row[colIndex] || "").length)
+        );
+        return { wch: Math.min(maxLength + 2, 60) };
+    });
+
+    worksheet["!cols"] = colWidths;
+
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Результаты");
+
+    XLSX.writeFile(workbook, filename);
+}
+

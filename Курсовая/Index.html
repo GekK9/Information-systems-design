@@ -143,11 +143,15 @@
                 </div>
             </section>
             <section class="hero calc_result_area hidden" id="resultsSection">
+                <div class="hero__button hidden" id="exportButtonWrapper">
+                    <button class="button button--search" id="exportButton">Экспорт таблицы</button>
+                </div>
                 <h1 style="margin: 0">Результат поиска</h1>
                 <div class="no-results hidden" id="noResultsMessage">
                     <p>По вашим баллам не найдено подходящих направлений.</p>
                     <p>Попробуйте ввести баллы по другим предметам.</p>
                 </div>
+                
                 <table class="calc_result_area brstu-table" id="directionsTable">
                     <thead>
                         <tr>
@@ -823,5 +827,6 @@
                     </table>
                 </section>
                 <script src="scripts.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
             </body>
         </html>
